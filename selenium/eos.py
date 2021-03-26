@@ -2,13 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import csv
 import time
+import secrets
 
-DRIVER_PATH = '/Users/mouse/src/chromedriver'
-driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-driver.get('https://mico.myiclubonline.com/iclub/members/signin?clubNumber=8667')
+# DRIVER_PATH = '/Users/mouse/src/chromedriver'
+# driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+# driver.get('https://mico.myiclubonline.com/iclub/members/signin?clubNumber=8667')
 
-time.sleep(3)
+# time.sleep(3)
 
+secret_key = { secrets.USRNME }
+print(secret_key)
 
 # getting the button by class name
 # button = driver.find_element_by_class_name("slide-out-btn")
