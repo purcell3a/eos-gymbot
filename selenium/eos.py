@@ -3,15 +3,17 @@ from selenium.webdriver.chrome.options import Options
 import csv
 import time
 import secrets
-
+import requests
 # DRIVER_PATH = '/Users/mouse/src/chromedriver'
 # driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 # driver.get('https://mico.myiclubonline.com/iclub/members/signin?clubNumber=8667')
 
 # time.sleep(3)
+# repo = 'eos-gymbot'
+# owner = 'purcell3a'
+# r = requests.get('https://api.github.com/repos/purcell3a/eos-gymbot/actions/secrets')
+# f = r.json()
 
-secret_key = { secrets.USRNME }
-print(secret_key)
 
 # getting the button by class name
 # button = driver.find_element_by_class_name("slide-out-btn")
