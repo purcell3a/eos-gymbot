@@ -12,30 +12,33 @@ import requests
 
 DRIVER_PATH = '/Users/mouse/src/chromedriver'
 
+response = requests.get('https://app.acuityscheduling.com/schedule.php?action=showCalendar&fulldate=1&owner=19763555&template=weekly')
+# response = requests.get('https://app.acuityscheduling.com/schedule.php?action=confirm&ajax=1&owner=19763555&PHPSESSID=k879l9i69vvu9o9q1c9fsge80g&template=weekly')
+print(response.__dict__)
 
-options = Options()
-options.headless = True
-options.add_argument("--window-size=1920,1200")
+# options = Options()
+# options.headless = True
+# options.add_argument("--window-size=1920,1200")
 
 
-driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-driver.get('https://eosfitness.com/schedule-workout-select-club-ca/')
+# driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+# driver.get('https://eosfitness.com/schedule-workout-select-club-ca/')
 
-time.sleep(3)
-WebDriverWait(driver, 20)
+# time.sleep(3)
+# WebDriverWait(driver, 20)
 
 #* SELECT INPUT BOXED BY ID:
-select = Select(driver.find_element_by_id('input_74_1'))
-WebDriverWait(driver, 20)
+# select = Select(driver.find_element_by_id('input_74_1'))
+# WebDriverWait(driver, 20)
 # select by visible text
-select.select_by_visible_text('Los Angeles- Downtown LA/Cesar Chavez')
-time.sleep(3)
-form_element = driver.find_element_by_xpath("html/body/div//form/div[2]")
-l = form_element.get_attribute('innerHTML')
+# select.select_by_visible_text('Los Angeles- Downtown LA/Cesar Chavez')
+# time.sleep(3)
+# form_element = driver.find_element_by_xpath("html/body/div//form/div[2]")
+# l = form_element.get_attribute('innerHTML')
 
 # button = driver.find_element_by_class_name('wpb_wrapper')
 # oteh = driver.find_element_by_id("step-pick-appointment")
-print(l)
+# print(l)
 
 # select by value 
 # select.select_by_value('1')
